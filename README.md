@@ -25,6 +25,4 @@ El Json de salida seria como
     "message": "Pago validado"
 }
 
-Si el proyecto se ejecuta solo, se debe desarcar el archivo https://github.com/idgualtero/Taller1/blob/main/Taller2/Diplomado.postman_collection.json montarlo en un Postman para que se active el mockque esta configurado (en este mismo proyecto esta para enviar la peticion a esta API), si quiere conectar con la siguiente API se debe descargar el proyecto de:
-
-y modificar la linea 42 del ApiController.java para cambiar la url de consumo de la segunda API.
+Si el proyecto se ejecuta solo, se debe desarcar el archivo https://github.com/idgualtero/Taller1/blob/main/Taller2/Diplomado.postman_collection.json montarlo en un Postman para que se active el mockque esta configurado (en este mismo proyecto esta para enviar la peticion a esta API), si quiere conectar con la siguiente API se debe descargar el proyecto de: https://github.com/graparg53/RabbitKafka seguir las instrucciones y modificar la linea 42 del ApiController.java para cambiar la url de consumo de la segunda API.
