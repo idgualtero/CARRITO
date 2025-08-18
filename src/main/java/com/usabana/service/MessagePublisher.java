@@ -14,9 +14,9 @@ public class MessagePublisher {
     private static final String COMMAND_ROUTING_KEY = "ms-shopping-cart.orders.save";
 
     // Enviar Comando
-    public void sendCommand(CloudEvent cloudEvent) {
-        cloudEvent.setType(COMMAND_ROUTING_KEY);
-        rabbitTemplate.convertAndSend(COMMAND_EXCHANGE, COMMAND_ROUTING_KEY, cloudEvent);
+    public void sendCommand(CloudEvent command) {
+        command.setType(COMMAND_ROUTING_KEY);
+        rabbitTemplate.convertAndSend(COMMAND_EXCHANGE, COMMAND_ROUTING_KEY, command);
     }
 
 }
