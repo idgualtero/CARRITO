@@ -1,4 +1,4 @@
-package com.usabana.models;
+package com.usabana.models.synchronous;
 
 public class AuthorizationResponse {
     private String code;
