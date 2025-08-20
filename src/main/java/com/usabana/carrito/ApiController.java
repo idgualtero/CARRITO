@@ -32,10 +32,12 @@ public class ApiController {
         System.out.println("Mensaje recibido: " + request.getId());
         AuthorizationResponse response = new AuthorizationResponse();
         response = enviarAutorizacion(request);
-        authorizationRequests.add(request);
-        if (response.getCode().equals("200") && authorizationRequests.size() == 3) {
-            publisher.sendCommand(generateCommand(authorizationRequests));
-            authorizationRequests.clear();
+        if (response.getCode().equals("200")) {
+            authorizationRequests.add(request);
+            if (authorizationRequests.size() == 3) {
+                publisher.sendCommand(generateCommand(authorizationRequests));
+                authorizationRequests.clear();
+            }
         }
         return ResponseEntity.ok(response);
     }
